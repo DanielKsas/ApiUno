@@ -1,5 +1,6 @@
 package com.example.ApIuno.models;
 
+
 public class Administrador {
     Integer id;
     String position;
@@ -48,4 +49,5 @@ public class Administrador {
     public void setEspeciality(String especiality) {
         this.especiality = especiality;
     }
+
 }
