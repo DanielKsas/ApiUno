@@ -1,13 +1,21 @@
 package com.example.ApIuno.models;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
-import java.util.Locale;
+
+@Entity
+
+
 
 public class Usuario {
 
-
+@Id
+@GeneratedValue(strategy =
+GenerationType.IDENTITY)
     private Integer id;
-    private String name;
+@Column(length = 50, nullable = false)
+    private String fullName;
     private LocalDate birthDate;
     private String email;
     private  String password;
@@ -18,7 +26,7 @@ public class Usuario {
 
     public Usuario(Integer id, String name, LocalDate birthDate, String email, String password, String country, String state) {
         this.id = id;
-        this.name = name;
+        this.fullName = name;
         this.birthDate = birthDate;
         this.email = email;
         this.password = password;
@@ -35,7 +43,7 @@ public class Usuario {
     }
 
     public String getName() {
-        return name;
+        return fullName;
     }
 
     public LocalDate getBirthDate() {
@@ -63,7 +71,7 @@ public class Usuario {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.fullName = name;
     }
 
     public void setBirthDate(LocalDate birthDate) {
