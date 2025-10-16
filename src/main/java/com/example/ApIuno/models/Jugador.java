@@ -1,11 +1,18 @@
 package com.example.ApIuno.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "jugadores")
 public class Jugador {
     private   Integer id;
     private   int timePlayed;
     private   String ranking;
     private   String description;
     private   String imageUser;
+
+    public Jugador() {
+    }
 
     public Jugador(Integer id, int timePlayed, String ranking, String description, String imageUser) {
         this.id = id;
@@ -54,4 +61,6 @@ public class Jugador {
     public void setImageUser(String imageUser) {
         this.imageUser = imageUser;
     }
+
+
 }

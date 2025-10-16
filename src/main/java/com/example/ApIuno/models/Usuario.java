@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name="users")
 
 
 
@@ -93,4 +94,5 @@ GenerationType.IDENTITY)
     public void setState(String state) {
         this.state = state;
     }
+
 }
